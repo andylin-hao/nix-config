@@ -43,18 +43,5 @@
   #time.timeZone = "Europe/Berlin";
 
   # Configure home-manager
-  home-manager = {
-    backupFileExtension = "hm-bak";
-    useGlobalPkgs = true;
-
-    config =
-      { config, lib, pkgs, ... }:
-      {
-        # Read the changelog before changing this value
-        home.stateVersion = "23.11";
-
-        # insert home-manager config
-      };
-  };
-  # home-manager.config = ./home.nix;
+  home-manager.config = ./home-manager/home.nix;
 }
