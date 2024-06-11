@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, outputs, config, lib, pkgs, ... }:
 
 {
   # Simply install just the packages
@@ -44,4 +44,5 @@
 
   # Configure home-manager
   home-manager.config = ./home-manager/home.nix;
+  home-manager.useGlobalPkgs = true;
 }
