@@ -72,7 +72,9 @@
     openssh
     gping
     delta
-  ];
+    tree-sitter
+    yazi
+  ]; 
 
   # Enable home-manager
   programs.home-manager.enable = true;
@@ -90,13 +92,21 @@
     userEmail = "linhaomails@gmail.com";
     extraConfig = {
     	core.pager = "delta";
-	delta.navigate = "true";
-	merge.conflictstyle = "diff3";
-	diff.colorMoved = "default";
-	pull.rebase = "true";
-	pull.ff = "only";
-	oh-my-zsh.hide-status = if (username == "nix-on-droid") then "1" else "0";
-	oh-my-zsh.hide-dirty = if (username == "nix-on-droid") then "1" else "0";
+	    delta.navigate = "true";
+	    merge.conflictstyle = "diff3";
+	    diff.colorMoved = "default";
+	    pull.rebase = "true";
+	    pull.ff = "only";
+	    oh-my-zsh.hide-status = if (username == "nix-on-droid") then "1" else "0";
+	    oh-my-zsh.hide-dirty = if (username == "nix-on-droid") then "1" else "0";
     };
+  };
+
+  programs.neovim = {
+    defaultEditor = true;
+  };
+
+  programs.yazi = {
+    enableZshIntegration = true;
   };
 }
