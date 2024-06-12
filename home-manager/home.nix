@@ -15,6 +15,7 @@
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
+    (import ./apps/zsh { inherit lib pkgs; })
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
@@ -46,8 +47,8 @@
   };
 
   home = {
-    username = "yoda";
-    homeDirectory = "/home/yoda";
+    username = "nix-on-droid";
+    homeDirectory = "/data/data/com.termux.nix/files/home";
   };
 
   # Add stuff for your user as you see fit:
@@ -59,6 +60,13 @@
     zsh
     neovim
     cowsay
+    lsd
+    ripgrep
+    fd
+    choose
+    sd
+    cheat
+    zoxide
   ];
 
   # Enable home-manager and git

@@ -5,8 +5,6 @@
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
     vim # or some other editor, e.g. nano or neovim
-    git
-    man
 
     # Some common stuff that people expect to have
     #procps
@@ -44,5 +42,5 @@
 
   # Configure home-manager
   home-manager.config = ./home-manager/home.nix;
-  home-manager.useGlobalPkgs = true;
+  home-manager.extraSpecialArgs = { inherit inputs outputs;};
 }
