@@ -6,8 +6,11 @@
   lib,
   config,
   pkgs,
+  username,
+  homeDirectory,
   ...
-}: {
+}: 
+{
   # You can import other home-manager modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
@@ -47,8 +50,8 @@
   };
 
   home = {
-    username = "nix-on-droid";
-    homeDirectory = "/data/data/com.termux.nix/files/home";
+    username = username;
+    homeDirectory = homeDirectory;
   };
 
   # Add stuff for your user as you see fit:
