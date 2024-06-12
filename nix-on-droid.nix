@@ -1,4 +1,4 @@
-{ inputs, outputs, config, lib, pkgs, ... }:
+{ inputs, outputs, config, lib, pkgs, username, homeDirectory, ... }:
 
 {
   # Simply install just the packages
@@ -49,5 +49,5 @@
 
   # Configure home-manager
   home-manager.config = ./home-manager/home.nix;
-  home-manager.extraSpecialArgs = { inherit inputs outputs;};
+  home-manager.extraSpecialArgs = { inherit inputs outputs username homeDirectory;};
 }

@@ -59,8 +59,6 @@
   home.packages = with pkgs; [ 
     git
     sudo
-    conda 
-    ouch
     zsh
     neovim
     cowsay
@@ -73,15 +71,32 @@
     zoxide
     openssh
     gping
+    delta
   ];
 
-  # Enable home-manager and git
+  # Enable home-manager
   programs.home-manager.enable = true;
-  programs.git.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
+
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+    userName = "Hao Lin";
+    userEmail = "linhaomails@gmail.com";
+    extraConfig = {
+    	core.pager = "delta";
+	delta.navigate = "true";
+	merge.conflictstyle = "diff3";
+	diff.colorMoved = "default";
+	pull.rebase = "true";
+	pull.ff = "only";
+	oh-my-zsh.hide-status = if (username == "nix-on-droid") then "1" else "0";
+	oh-my-zsh.hide-dirty = if (username == "nix-on-droid") then "1" else "0";
+    };
+  };
 }
