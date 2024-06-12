@@ -59,8 +59,8 @@
   home.packages = with pkgs; [ 
     git
     sudo
-    zsh
     neovim
+    zsh
     cowsay
     lsd
     ripgrep
@@ -68,12 +68,10 @@
     choose
     sd
     cheat
-    zoxide
     openssh
     gping
     delta
     tree-sitter
-    yazi
   ]; 
 
   # Enable home-manager
@@ -107,6 +105,14 @@
   };
 
   programs.yazi = {
+    enable = true;
     enableZshIntegration = true;
+    package = pkgs.yazi;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    package = pkgs.zoxide;
   };
 }
