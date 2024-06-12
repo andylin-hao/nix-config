@@ -55,6 +55,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
     git
+    sudo
     conda 
     ouch
     zsh
@@ -67,6 +68,8 @@
     sd
     cheat
     zoxide
+    openssh
+    gping
   ];
 
   # Enable home-manager and git

@@ -5,6 +5,7 @@
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
     vim # or some other editor, e.g. nano or neovim
+    (nerdfonts.override { fonts = [ "Meslo" "DroidSansMono" ]; })
 
     # Some common stuff that people expect to have
     #procps
@@ -26,6 +27,8 @@
     #unzip
   ];
 
+  user.shell = "${pkgs.zsh}/bin/zsh";
+
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
 
@@ -36,6 +39,10 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  # Font pacakges
+  terminal.font = "${pkgs.nerdfonts}/share/fonts/truetype/NerdFonts/MesloLGLDZNerdFont-Regular.ttf";
+  # terminal.font = "${pkgs.terminus_font_ttf}/share/fonts/truetype/TerminusTTF.ttf";
 
   # Set your time zone
   #time.timeZone = "Europe/Berlin";

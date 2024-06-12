@@ -9,9 +9,14 @@
 
     plugins = [
       {
-        name = "fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-        file = "share/fzf-tab/fzf-tab.zsh";
+        name = "zsh-syntax-highlighting";
+        src = pkgs.zsh-syntax-highlighting;
+        file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
+      }
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.zsh-autosuggestions;
+        file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
       }
       {
         name = "rclone_complete";
@@ -28,15 +33,14 @@
 
     oh-my-zsh = {
       enable = true;
+      theme = "robbyrussell";
       plugins = [
-        "fzf"
         "git"
 	"sudo"
         "rust"
         "python"
         "pip"
         "systemd"
-        "ssh-agent"
         "docker"
         "docker-compose"
         "history-substring-search"
