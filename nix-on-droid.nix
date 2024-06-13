@@ -9,6 +9,7 @@
     clang
     nodejs
     man
+    sudo
     gzip
     zip
     unzip

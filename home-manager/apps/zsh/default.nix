@@ -7,6 +7,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    initExtra = ''
+      fortune linux startrek | cowsay -f /usr/share/cowsay/cows/tux.cow
+    '';
+
     plugins = [
       {
         name = "zsh-syntax-highlighting";

@@ -58,8 +58,8 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
     git
-    sudo
     neovim
+    fortune
     zsh
     cowsay
     lsd
