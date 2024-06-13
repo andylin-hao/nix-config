@@ -29,6 +29,7 @@
       ls = "lsd";
       lal = "lsd -al";
       ll = "lsd -l";
+      cd = "z";
     };
 
     oh-my-zsh = {
@@ -36,7 +37,7 @@
       theme = "robbyrussell";
       plugins = [
         "git"
-	"sudo"
+      	"sudo"
         "rust"
         "python"
         "pip"
