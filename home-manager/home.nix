@@ -60,7 +60,6 @@
     git
     neovim
     fortune
-    zsh
     cowsay
     lsd
     ripgrep
