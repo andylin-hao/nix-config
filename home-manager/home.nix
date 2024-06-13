@@ -72,6 +72,8 @@
     gping
     delta
     tree-sitter
+    btop
+    htop
   ]; 
 
   # Enable home-manager

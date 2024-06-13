@@ -12,6 +12,8 @@
     gzip
     zip
     unzip
+    procps
+    killall
 
     # Some common stuff that people expect to have
     #procps
