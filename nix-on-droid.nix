@@ -16,6 +16,9 @@
     unzip
     procps
     killall
+    gnutar
+    bzip2
+    xz
 
     # Some common stuff that people expect to have
     #procps

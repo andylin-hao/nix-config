@@ -74,6 +74,8 @@
     btop
     htop
     tmux
+    curl
+    wget
   ]; 
 
   # Enable home-manager
