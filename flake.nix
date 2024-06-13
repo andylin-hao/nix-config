@@ -74,10 +74,10 @@
       "yoda@Desktop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {
-	  inherit inputs outputs;
-	  username = "yoda";
+	        inherit inputs outputs;
+	        username = "yoda";
           homeDirectory = "/home/yoda";
-	};
+	      };
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
@@ -87,9 +87,9 @@
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       extraSpecialArgs = {
-	inherit inputs outputs;
-	username = "nix-on-droid";
-	homeDirectory = "/data/data/com.termux.nix/files/home";
+        inherit inputs outputs;
+	      username = "nix-on-droid";
+	      homeDirectory = "/data/data/com.termux.nix/files/home";
       };
       modules = [ ./nix-on-droid.nix ];
     };
