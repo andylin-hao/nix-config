@@ -1,6 +1,25 @@
 {
   description = "hao-config";
 
+  nixConfig = {
+    trusted-substituters = [
+      # personal cache server
+      "https://andylin-hao.cachix.org"
+      # cache mirror located in China
+      # status: https://mirror.sjtu.edu.cn/
+      # "https://mirror.sjtu.edu.cn/nix-channels/store"
+      # status: https://mirrors.ustc.edu.cn/status/
+      # "https://mirrors.ustc.edu.cn/nix-channels/store"
+      # Tuna mirror
+      # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
+      "https://cache.nixos.org"
+    ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "andylin-hao.cachix.org-1:6EIRaHtU1uV7RYB5ZitwdcT17LcgThjRvm9imPjumog="
+    ];
+  };
+
   inputs = {
     # Nixpkgs
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
