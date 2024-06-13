@@ -8,7 +8,7 @@
     syntaxHighlighting.enable = true;
 
     initExtra = ''
-      fortune linux startrek | cowsay -f /usr/share/cowsay/cows/tux.cow
+      fortune linux startrek | cowsay -ftux
     '';
 
     plugins = [
