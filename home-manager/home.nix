@@ -74,6 +74,7 @@
     tree-sitter
     btop
     htop
+    tmux
   ]; 
 
   # Enable home-manager
