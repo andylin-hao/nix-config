@@ -19,6 +19,7 @@
     gnutar
     bzip2
     xz
+    python3
 
     # Some common stuff that people expect to have
     #procps
