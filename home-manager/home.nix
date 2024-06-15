@@ -76,6 +76,7 @@
     tmux
     curl
     wget
+    nodejs
   ]; 
 
   # Enable home-manager
@@ -92,7 +93,14 @@
     lfs.enable = true;
     userName = "Hao Lin";
     userEmail = "linhaomails@gmail.com";
+    
+    signing = {
+      signByDefault = true;
+      key = "${homeDirectory}/.ssh/id_ed25519.pub"
+    };
+
     extraConfig = {
+      gpg.format = "ssh";
     	core.pager = "delta";
 	    delta.navigate = "true";
 	    merge.conflictstyle = "diff3";
