@@ -89,6 +89,10 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
 
+  programs.jq = {
+    enable = true;
+  };
+
   programs.git = {
     enable = true;
     lfs.enable = true;
