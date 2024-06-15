@@ -8,7 +8,6 @@
     (nerdfonts.override { fonts = [ "Meslo" "DroidSansMono" ]; })
     zsh
     clang
-    nodejs
     man
     sudo
     gzip

@@ -76,6 +76,8 @@
     tmux
     curl
     wget
+    nodejs
+    bat
   ]; 
 
   # Enable home-manager
@@ -92,7 +94,14 @@
     lfs.enable = true;
     userName = "Hao Lin";
     userEmail = "linhaomails@gmail.com";
+    
+    signing = {
+      signByDefault = true;
+      key = "${homeDirectory}/.ssh/id_ed25519.pub";
+    };
+
     extraConfig = {
+      gpg.format = "ssh";
     	core.pager = "delta";
 	    delta.navigate = "true";
 	    merge.conflictstyle = "diff3";
@@ -101,6 +110,7 @@
 	    pull.ff = "only";
 	    oh-my-zsh.hide-status = if (username == "nix-on-droid") then "1" else "0";
 	    oh-my-zsh.hide-dirty = if (username == "nix-on-droid") then "1" else "0";
+      credential.helper = "store";
     };
   };
 
