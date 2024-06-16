@@ -2,7 +2,7 @@
   description = "hao-config";
 
   nixConfig = {
-    trusted-substituters = [
+    substituters = [
       # personal cache server
       "https://andylin-hao.cachix.org"
       # cache mirror located in China
@@ -15,8 +15,8 @@
       "https://cache.nixos.org"
     ];
     trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "andylin-hao.cachix.org-1:6EIRaHtU1uV7RYB5ZitwdcT17LcgThjRvm9imPjumog="
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
   };
 
