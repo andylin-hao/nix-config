@@ -78,6 +78,7 @@
     wget
     nodejs
     bat
+    rclone
   ]; 
 
   # Enable home-manager
