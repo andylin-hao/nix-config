@@ -79,6 +79,7 @@
     nodejs
     bat
     rclone
+    unar
   ]; 
 
   # Enable home-manager
