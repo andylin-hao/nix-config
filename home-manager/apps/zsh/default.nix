@@ -1,4 +1,4 @@
-{ lib, pkgs, username, ... }: {
+{ lib, pkgs, username, homeDirectory, ... }: {
 
   programs.zsh = {
     enable = true;
@@ -7,12 +7,11 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = ''
-      fortune linux startrek | cowsay -ftux
-    '';
+    initExtra = "fortune linux startrek | cowsay -ftux";
 
     localVariables = {
       ZSH_DISABLE_COMPFIX = if username == "root" then "true" else "false";
+      PATH = if username == "yoda" then homeDirectory + "/Android/Sdk/platform-tools:$PATH" else "$PATH";
     };
 
     plugins = [
