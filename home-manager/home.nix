@@ -76,7 +76,6 @@
     tmux
     curl
     wget
-    nodejs
     bat
     rclone
     unar
