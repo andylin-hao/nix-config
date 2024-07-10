@@ -79,6 +79,8 @@
     bat
     rclone
     unar
+    cmatrix
+    sl
   ]; 
 
   # Enable home-manager
