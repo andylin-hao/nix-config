@@ -78,6 +78,7 @@
     wget
     bat
     rclone
+    zellij
     unar
     cmatrix
     sl
