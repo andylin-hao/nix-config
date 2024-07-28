@@ -8,37 +8,30 @@
     (nerdfonts.override { fonts = [ "Meslo" "DroidSansMono" ]; })
     zsh
     clang
-    man
     sudo
-    gzip
-    zip
-    unzip
-    procps
-    killall
-    gnutar
-    bzip2
-    xz
     python3
     nodejs
+    qemu
+    iputils
 
     # Some common stuff that people expect to have
-    #procps
-    #killall
-    #diffutils
-    #findutils
-    #utillinux
-    #tzdata
-    #hostname
-    #man
-    #gnugrep
-    #gnupg
-    #gnused
-    #gnutar
-    #bzip2
-    #gzip
-    #xz
-    #zip
-    #unzip
+    procps
+    killall
+    diffutils
+    findutils
+    utillinux
+    tzdata
+    hostname
+    man
+    gnugrep
+    gnupg
+    gnused
+    gnutar
+    bzip2
+    gzip
+    xz
+    zip
+    unzip
   ];
 
   user.shell = "${pkgs.zsh}/bin/zsh";
