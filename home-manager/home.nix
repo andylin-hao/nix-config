@@ -117,8 +117,6 @@
 	    diff.colorMoved = "default";
 	    pull.rebase = "true";
 	    pull.ff = "only";
-	    oh-my-zsh.hide-status = if (username == "nix-on-droid") then "1" else "0";
-	    oh-my-zsh.hide-dirty = if (username == "nix-on-droid") then "1" else "0";
       credential.helper = "store";
     };
   };
