@@ -82,7 +82,6 @@
     unar
     cmatrix
     sl
-    quickemu
   ]; 
 
   # Enable home-manager
