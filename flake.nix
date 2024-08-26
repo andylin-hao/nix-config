@@ -103,6 +103,19 @@
         ];
       };
 
+      "root@Desktop"  = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {
+	        inherit inputs outputs;
+	        username = "root";
+          homeDirectory = "/root";
+	      };
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+        ];
+      };
+
       "yoda@Laptop" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {
@@ -116,8 +129,8 @@
         ];
       };
 
-      "root@Desktop"  = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+      "root@Laptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {
 	        inherit inputs outputs;
 	        username = "root";
