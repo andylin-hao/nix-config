@@ -3,15 +3,13 @@
 
   nixConfig = {
     substituters = [
-      # personal cache server
-      "https://andylin-hao.cachix.org"
       # cache mirror located in China
       # status: https://mirror.sjtu.edu.cn/
       # "https://mirror.sjtu.edu.cn/nix-channels/store"
       # status: https://mirrors.ustc.edu.cn/status/
       # "https://mirrors.ustc.edu.cn/nix-channels/store"
       # Tuna mirror
-      # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store/"
       "https://cache.nixos.org"
     ];
     trusted-public-keys = [

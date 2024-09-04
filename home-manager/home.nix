@@ -82,6 +82,7 @@
     unar
     cmatrix
     sl
+    nodejs
   ]; 
 
   # Enable home-manager

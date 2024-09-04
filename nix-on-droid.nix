@@ -10,7 +10,6 @@
     clang
     sudo
     python3
-    nodejs
     qemu
     iputils
     busybox
