@@ -98,6 +98,11 @@
     enable = true;
   };
 
+  programs.ssh = {
+    serverAliveInterval = 240;
+    serverAliveCountMax = 10;
+  };
+
   programs.git = {
     enable = true;
     lfs.enable = true;
