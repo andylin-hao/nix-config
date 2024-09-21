@@ -73,7 +73,6 @@
     tree-sitter
     btop
     htop
-    tmux
     curl
     wget
     bat
@@ -83,6 +82,7 @@
     cmatrix
     sl
     nodejs
+    dust
   ]; 
 
   # Enable home-manager
