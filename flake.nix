@@ -31,7 +31,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-on-droid = {
-      url = "github:nix-community/nix-on-droid/release-23.11";
+      url = "github:nix-community/nix-on-droid/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
@@ -143,6 +143,7 @@
     };
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
+      pkgs = nixpkgs.legacyPackages.aarch64-linux; # Home-manager requires 'pkgs' instance
       extraSpecialArgs = {
         inherit inputs outputs;
 	      username = "nix-on-droid";
