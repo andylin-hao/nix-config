@@ -83,6 +83,7 @@
     sl
     nodejs
     dust
+    glances
   ]; 
 
   # Enable home-manager
