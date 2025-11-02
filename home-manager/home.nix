@@ -85,6 +85,7 @@
     dust
     glances
     mergiraf
+    nvitop
   ]; 
 
   # Enable home-manager
@@ -123,6 +124,7 @@
 	    pull.ff = "only";
       credential.helper = "store";
       init.defaultBranch = "main";
+      safe.directory = "*";
 
       # mergiraf
       merge.mergiraf.name = "mergiraf";
