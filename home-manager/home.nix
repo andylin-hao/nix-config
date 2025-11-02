@@ -111,8 +111,10 @@
     settings = {
       user.name = "Hao Lin";
       user.email = "linhaomails@gmail.com";
+      user.signingkey = "${homeDirectory}/.ssh/id_ed25519.pub";
       
       gpg.format = "ssh";
+      commit.gpgsign = true;
     	core.pager = "delta";
 	    delta.navigate = "true";
 	    merge.conflictstyle = "diff3";
@@ -120,15 +122,11 @@
 	    pull.rebase = "true";
 	    pull.ff = "only";
       credential.helper = "store";
+      init.defaultBranch = "main";
 
       # mergiraf
       merge.mergiraf.name = "mergiraf";
       merge.mergiraf.driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
-    };
-
-    signing = {
-      signByDefault = true;
-      key = "${homeDirectory}/.ssh/id_ed25519.pub";
     };
   };
 
