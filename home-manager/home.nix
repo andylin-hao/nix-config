@@ -84,6 +84,7 @@
     nodejs
     dust
     glances
+    mergiraf
   ]; 
 
   # Enable home-manager
@@ -100,22 +101,17 @@
   };
 
   programs.ssh = {
-    serverAliveInterval = 240;
-    serverAliveCountMax = 10;
+    matchBlocks."*".serverAliveInterval = 240;
+    matchBlocks."*".serverAliveCountMax = 10;
   };
 
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Hao Lin";
-    userEmail = "linhaomails@gmail.com";
-
-    signing = {
-      signByDefault = true;
-      key = "${homeDirectory}/.ssh/id_ed25519.pub";
-    };
-
-    extraConfig = {
+    settings = {
+      user.name = "Hao Lin";
+      user.email = "linhaomails@gmail.com";
+      
       gpg.format = "ssh";
     	core.pager = "delta";
 	    delta.navigate = "true";
@@ -124,6 +120,15 @@
 	    pull.rebase = "true";
 	    pull.ff = "only";
       credential.helper = "store";
+
+      # mergiraf
+      merge.mergiraf.name = "mergiraf";
+      merge.mergiraf.driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
+    };
+
+    signing = {
+      signByDefault = true;
+      key = "${homeDirectory}/.ssh/id_ed25519.pub";
     };
   };
 

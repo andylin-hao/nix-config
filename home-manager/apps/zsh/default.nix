@@ -7,7 +7,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = "fortune linux startrek | cowsay -ftux";
+    initContent = "fortune linux startrek | cowsay -ftux";
 
     localVariables = {
       ZSH_DISABLE_COMPFIX = if username == "root" then "true" else "false";
