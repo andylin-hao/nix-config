@@ -5,7 +5,7 @@
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
     vim # or some other editor, e.g. nano or neovim
-    (nerdfonts.override { fonts = [ "Meslo" "DroidSansMono" ]; })
+    nerd-fonts.meslo-lg
     zsh
     clang
     sudo
@@ -48,7 +48,7 @@
   '';
 
   # Font pacakges
-  terminal.font = "${pkgs.nerdfonts}/share/fonts/truetype/NerdFonts/MesloLGLDZNerdFont-Regular.ttf";
+  terminal.font = "${pkgs.nerd-fonts.meslo-lg}/share/fonts/truetype/NerdFonts/MesloLG/MesloLGLDZNerdFont-Regular.ttf";
   # terminal.font = "${pkgs.terminus_font_ttf}/share/fonts/truetype/TerminusTTF.ttf";
 
   # Set your time zone
